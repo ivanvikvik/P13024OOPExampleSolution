@@ -15,25 +15,23 @@ void change(Student student) {
 }
 
 int main() {
-	Student st1, temp;
+	Student* st1 = new Student;
 
-	st1.name = "Bogdan";
-	st1.age = 14;
-	st1.mark = 9.5;
-	st1.alive = true;
+	st1->name = "Vlad";
+	st1->age = 15;
+	st1->mark = 9.9;
+	st1->alive = true;
 
-	temp = st1;
-		
-	cout << "Before:" << endl;
-	cout << st1.getString() << endl;
-	cout << temp.getString() << endl;
+	Student* st2 = st1;
 
-	//change(st1);
-	st1.name = "Vova";
+	cout << "Before: " << endl;
+	cout << st1->getString() << endl;
 
-	cout << "After:" << endl;
-	cout << st1.getString() << endl;
-	cout << temp.getString() << endl;
+	st2->name = "Matvey";
+
+	cout << "After: " << endl;
+	cout << st1->getString() << endl;
+
 
 	return 0;
 }
