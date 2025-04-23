@@ -4,65 +4,87 @@ class Student {
 public:
 	string name;
 	int age;
-	double mark;
+	int* marks;
+	int countMark;
 	bool alive;
 
 	// default-constructor or constructor without argumnets
-	Student() {
-		cout << "Default-constructor..." << endl;
-		name = "no name";
-		age = 13;
-		mark = 4.0;
-		alive = true;
+	Student() : Student("no name", 13, 10, true) {
+		//cout << "Default-constructor..." << endl;		
 	}
 
 	// constructor with arguments
-	Student(string nm) {
-		cout << "constructor with arguments..." << endl;
-		name = nm;
-		age = 13;
-		mark = 4.0;
-		alive = true;
+	Student(string name) : Student(name, 13, 0, true) {
+		//cout << "constructor with arguments..." << endl;
+	
 	}
 
 	// constructor with arguments
-	Student(string nm, int a) {
-		cout << "constructor with arguments..." << endl;
-		name = nm;
-		age = a;
-		mark = 4.0;
-		alive = true;
+	Student(string nm, int a) : Student(nm, a, 0, true) {
+		//cout << "constructor with arguments..." << endl;
 	}
 
 	// canonical-constructor
-	Student(string nm, int a, double m, bool al) {
-		cout << "canonical-constructor..." << endl;
-		name = nm;
-		age = a;
-		mark = m;
-		alive = al;
+	Student(string name, int age, int countMark, bool alive) {
+		//cout << "canonical-constructor..." << endl;
+		this->name = name;
+		this->age = age;		
+		this->alive = alive;
+		this->countMark = countMark;
+		marks = new int[countMark];
+		for (int i = 0; i < countMark; i++)
+		{
+			marks[i] = 4;
+		}
 	}
 
 	// copy-constructor
-	Student(const Student& student) {
-		cout << "copy-constructor..." << endl;
-		name = student.name;
-		age = student.age;
-		mark = student.mark;
-		alive = student.alive;
+	Student(const Student& student) : Student(student.name, student.age,
+		student.countMark, student.alive) {
+		//cout << "copy-constructor..." << endl;
 	}
 
 	// destructor
 	~Student() {
-		cout << "destructor..." << endl;
+		//cout << "destructor..." << endl;
+		
+		if (marks != nullptr) {
+			delete[] marks;
+		}
 	}
 
 	string toString() {
-		string s = "Name: " + name;
-		s += ", age: " + to_string(age);
-		s += ", mark: " + to_string(mark);
+		string s = "Name: " + this->name;
+		s += ", age: " + to_string(this->age);
+		s += ", marks: " + getAllMarks();
 		s += ", alive: ";
-		s += (alive ? "yes" : "no");
+		s += (this->alive ? "yes" : "no");
 		return s;
 	}
+
+	string getAllMarks() {
+		if (countMark == 0) {
+			return "[]";
+		}
+
+		string s = "";
+
+		for (int i = 0; i < countMark; i++)
+		{
+			s += to_string(marks[i]) + " ";
+		}
+
+		return s;
+	}
+
+	int getMark(int index) {
+		return index < 0 || index >= countMark || !marks ? 0 : marks[index];
+	}
+
+	void setMark(int index, int mark) {
+		if (index >= 0 && index < countMark && marks) {
+			marks[index] = mark;
+		}
+	}
+
 };

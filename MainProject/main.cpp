@@ -1,23 +1,21 @@
-#include "Teacher.h"
+#include "Initializer.h"
 
 int main() {
-	Student student1{};
-	/*Student student2("Alex");
-	Student student3("Vlad", 13, 10, true);
-	Student student4(student3);*/
+	int count;
 
-	Student student2{ "Alex" };
-	//Student student3{ "Vlad", 13, 10, true };
+	cout << "Input number of students: ";
+	cin >> count;
 
-	Student student3{ "Vlad", 13 };
-	Student student4{ student3 };
+	Student* list = nullptr;
 
+	Initializer initializer;
 
-	cout << student1.toString() << endl;
-	cout << student2.toString() << endl;
-	cout << student3.toString() << endl;
-	cout << student4.toString() << endl;
+	initializer.init(list, count);
 
+	for (int i = 0; i < count; i++)
+	{
+		cout << list[i].toString() << endl;
+	}
 
 	return 0;
 }
