@@ -1,12 +1,32 @@
 #include "main.h"
 
 class Student {
-public:
+private:
 	string name;
 	int age;
-	int* marks;
 	int countMark;
+	int* marks;
 	bool alive;
+
+public:
+	string getName() { return name; }
+	void setName(string name) { this->name = name; }
+
+	int getAge() { return age; }
+	void setAge(int age) {
+		if (age >= 13 && age <= 18) {
+			this->age = age;
+		}
+	}
+
+	int getCountMark() { return countMark; }
+
+	int* getMarks() {
+		return marks;
+	}
+
+	bool isAlive() { return alive; }
+	void setAlive(bool alive) { this->alive = alive; }
 
 	// default-constructor or constructor without argumnets
 	Student() : Student("no name", 13, 10, true) {
