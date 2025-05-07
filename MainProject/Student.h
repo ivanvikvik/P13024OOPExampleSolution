@@ -2,11 +2,11 @@
 
 class Student {
 private:
-	string name;
-	int age;
-	int countMark;
-	int* marks;
-	bool alive;
+	string	name;
+	int		age;
+	int		countMark;
+	int*	marks;
+	bool	alive;
 
 	string getAllMarks();
 

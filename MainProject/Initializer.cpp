@@ -23,7 +23,8 @@ void Initializer::init(Student*& list, int count) {
 		for (int j = 0; j < list[i].getCountMark(); j++)
 		{
 			//list[i].getMarks()[j] = rand() % (maxMark - minMark + 1) + minMark;
-			*(list[i].getMarks() + j) = rand() % (maxMark - minMark + 1) + minMark;
+			//*(list[i].getMarks() + j) = rand() % (maxMark - minMark + 1) + minMark;
+			list[i].setMark(j, rand() % (maxMark - minMark + 1) + minMark);
 		}
 	}
 }
