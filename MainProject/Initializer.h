@@ -1,6 +1,6 @@
-#include "Group.h"
-
-class Initializer {
-public:
-	void init(Group group);
-};
+//#include "Group.h"
+//
+//class Initializer {
+//public:
+//	void init(Group group);
+//};

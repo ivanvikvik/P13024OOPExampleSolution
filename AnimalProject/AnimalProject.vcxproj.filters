@@ -18,48 +18,39 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Student.cpp">
+    <ClCompile Include="Animal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Initializer.cpp">
+    <ClCompile Include="Cat.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Manager.cpp">
+    <ClCompile Include="Dog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Group.cpp">
+    <ClCompile Include="AnimalStudio.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Human.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Worker.cpp">
+    <ClCompile Include="Crocodile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Student.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Teacher.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Initializer.h">
+    <ClInclude Include="Animal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Manager.h">
+    <ClInclude Include="Cat.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Group.h">
+    <ClInclude Include="Dog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Human.h">
+    <ClInclude Include="AnimalStudio.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Worker.h">
+    <ClInclude Include="Crocodile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
