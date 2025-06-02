@@ -5,17 +5,9 @@
 
 int main() {
 	AnimalStudio studio;
-	//Animal animal("Animal");
-	//Dog dog1("Pushok");
-	//Cat cat1("Sharly");
-	//Dog dog2("Laika");
-	//Dog dog3("Sharik");
-	//Crocodile crocodile("Aligator");
-	//Cat cat2("Adel");
-	//Cat cat3("Masha");
-
+	
 	Animal** animals;
-	int size = 8;
+	int size = 5;
 	/*animals = new Animal * [size] {&dog1, & cat1, & animal, & dog2, & dog3,
 		& cat2, & cat3, & crocodile};*/
 
