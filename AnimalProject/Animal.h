@@ -5,12 +5,25 @@
 class Animal
 {
 public:
+	static int count;
 	string name;
 
-	Animal(string name) : name(name) {}
+	Animal() {
+		count++;
+	}
+
+	Animal(string name) : name(name) {
+		count++;
+	}
+
+	~Animal() {
+		count--;
+	}
+
+	static int getCount();
 
 	// overriding
-	virtual void getVoice() = 0 {
+	virtual void getVoice() {
 		//...
 	}
 };

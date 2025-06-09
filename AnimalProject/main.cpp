@@ -3,19 +3,25 @@
 #include "Dog.h"
 #include "Crocodile.h"
 
-int main() {
-	AnimalStudio studio;
-	
-	Animal** animals;
-	int size = 5;
-	/*animals = new Animal * [size] {&dog1, & cat1, & animal, & dog2, & dog3,
-		& cat2, & cat3, & crocodile};*/
+int main() {	
+	cout << Animal::count << endl;
+	Animal a1, a2, a3;
 
+	{
+		Animal a4;
+		cout << Animal::getCount() << endl;
+		cout << a4.getCount() << endl;
+	}
+
+	cout << Animal::count << endl;
+
+	/*Animal** animals;
+	int size = 5;
+	
 	animals = new Animal * [size] {new Dog("Sharly"), new Cat("Adel"),
 		new Crocodile("Aligator")};
 
-
-	studio.justDoIt(animals, size);
-
+	cout << animals[0]->count << endl;*/
+	
 	return 0;
 }

@@ -13,7 +13,7 @@ public:
 	~Manager() {
 		cout << "Manager destructor" << endl;
 	}
-	//	Group getBestStudents(Group group);
-	//	Group getWorstStudents(Group group);
+	static Group getBestStudents(Group group);
+	static Group getWorstStudents(Group group);
 };
 
